@@ -1,0 +1,35 @@
+[package]
+authors = ["John Terrell <john@coolpeoplenetworks.com>"]
+edition = "2018"
+name = "embassy-sam4-examples"
+version = "0.1.0"
+
+[features]
+default = [
+    "defmt-default",
+]
+defmt-default = []
+defmt-trace = []
+defmt-debug = []
+defmt-info = []
+defmt-warn = []
+defmt-error = []
+
+atsam4e16e = ["embassy-sam4/atsam4e16e"]
+atsam4sd32c = ["embassy-sam4/atsam4sd32c"]
+
+[dependencies]
+embassy = { version = "0.1.0", path = "../embassy", features = ["defmt", "defmt-trace"] }
+embassy-traits = { version = "0.1.0", path = "../embassy-traits", features = ["defmt"] }
+embassy-sam4 = { version = "0.1.0", path = "../embassy-sam4" }
+embassy-extras = {version = "0.1.0", path = "../embassy-extras" }
+
+defmt = "0.2.0"
+defmt-rtt = "0.2.0"
+
+cortex-m = "0.7.1"
+cortex-m-rt = "0.6.13"
+embedded-hal    = { version = "0.2.4" }
+panic-probe = "0.1.0"
+futures = { version = "0.3.8", default-features = false, features = ["async-await"] }
+rtt-target = { version = "0.3", features = ["cortex-m"] }
