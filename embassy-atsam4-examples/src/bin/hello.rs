@@ -10,13 +10,13 @@ mod example_common;
 use example_common::*;
 
 use cortex_m_rt::entry;
-use embassy_sam4::hal::prelude::*;
+use embassy_atsam4::hal::prelude::*;
 
 #[entry]
 fn main() -> ! {
     info!("Hello World!");
 
-    let p = embassy_sam4::pac::Peripherals::take().unwrap();
+    let p = embassy_atsam4::pac::Peripherals::take().unwrap();
 
     // p.DBGMCU.cr.modify(|_, w| {
     //     w.dbg_sleep().set_bit();

@@ -6,8 +6,7 @@
 #![feature(type_alias_impl_trait)]
 #![allow(incomplete_features)]
 
-#[cfg(feature = "atsam4e16e")]
-pub use {atsam4_hal as hal, atsam4_hal::atsam4e16e as pac};
+pub use atsam4_hal as hal;
+pub use atsam4_hal::pac;
 
-#[cfg(feature = "atsam4sd32c")]
-pub use {atsam4_hal as hal, atsam4_hal::atsam4sd32c as pac};
+pub mod rtc;

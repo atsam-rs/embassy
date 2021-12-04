@@ -1,5 +1,5 @@
 [package]
-name = "embassy-sam4"
+name = "embassy-atsam4"
 version = "0.1.0"
 authors = ["John Terrell <john@coolpeoplenetworks.com>"]
 edition = "2018"
@@ -26,5 +26,8 @@ cortex-m = "0.7.1"
 embedded-hal    = { version = "0.2.4" }
 embedded-dma    = { version = "0.1.2" }
 nb = "*"
-atsam4-hal = { version = "0.1.7" }
+atsam4-hal = { version = "0.1.9" }
 futures = { version = "0.3.5", default-features = false, features = ["async-await"] }
+
+[patch.crates-io]
+atsam4-hal = { path = "../../atsam4-hal" }

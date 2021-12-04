@@ -203,11 +203,11 @@ mod chip;
 #[path = "chip/rp.rs"]
 mod chip;
 
-#[cfg(feature = "sam4")]
-#[path = "chip/sam4.rs"]
+#[cfg(feature = "atsam4")]
+#[path = "chip/atsam4.rs"]
 mod chip;
 
-#[cfg(any(feature = "nrf", feature = "stm32", feature = "rp", feature = "sam4"))]
+#[cfg(any(feature = "nrf", feature = "stm32", feature = "rp", feature = "atsam4"))]
 #[proc_macro_attribute]
 pub fn main(args: TokenStream, item: TokenStream) -> TokenStream {
     let macro_args = syn::parse_macro_input!(args as syn::AttributeArgs);

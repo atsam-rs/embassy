@@ -1,12 +1,13 @@
 [package]
 authors = ["John Terrell <john@coolpeoplenetworks.com>"]
 edition = "2018"
-name = "embassy-sam4-examples"
+name = "embassy-atsam4-examples"
 version = "0.1.0"
 
 [features]
 default = [
     "defmt-default",
+    "atsam4e16e",
 ]
 defmt-default = []
 defmt-trace = []
@@ -15,13 +16,13 @@ defmt-info = []
 defmt-warn = []
 defmt-error = []
 
-atsam4e16e = ["embassy-sam4/atsam4e16e"]
-atsam4sd32c = ["embassy-sam4/atsam4sd32c"]
+atsam4e16e = ["embassy-atsam4/atsam4e16e"]
+atsam4sd32c = ["embassy-atsam4/atsam4sd32c"]
 
 [dependencies]
 embassy = { version = "0.1.0", path = "../embassy", features = ["defmt", "defmt-trace"] }
 embassy-traits = { version = "0.1.0", path = "../embassy-traits", features = ["defmt"] }
-embassy-sam4 = { version = "0.1.0", path = "../embassy-sam4" }
+embassy-atsam4 = { version = "0.1.0", path = "../embassy-atsam4" }
 embassy-extras = {version = "0.1.0", path = "../embassy-extras" }
 
 defmt = "0.2.0"
